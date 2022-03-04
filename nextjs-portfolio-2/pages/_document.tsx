@@ -6,8 +6,8 @@ import Document, {
   NextScript,
 } from "next/document";
 import * as React from "react";
-import createEmotionCache from "../src/createEmotionCache";
-import theme from "../src/theme";
+import createEmotionCache from "../lib/createEmotionCache";
+import theme from "../styles/theme";
 
 export default class MyDocument extends Document {
   render() {
@@ -24,8 +24,8 @@ export default class MyDocument extends Document {
             href="/static/favicon.ico"
           />
           <link
+            href="https://fonts.googleapis.com/css2?family=Kosugi&family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {(this.props as any).emotionStyleTags}

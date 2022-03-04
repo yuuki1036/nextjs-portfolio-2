@@ -7,8 +7,9 @@ import { ThemeProvider } from "@mui/material/styles";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import * as React from "react";
-import createEmotionCache from "../src/createEmotionCache";
-import theme from "../src/theme";
+import { ParallaxProvider } from "react-scroll-parallax";
+import createEmotionCache from "../lib/createEmotionCache";
+import theme from "../styles/theme";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -34,7 +35,9 @@ export default function MyApp(props: MyAppProps) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <ParallaxProvider>
+          <Component {...pageProps} />
+        </ParallaxProvider>
       </ThemeProvider>
     </CacheProvider>
   );
