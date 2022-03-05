@@ -7,17 +7,18 @@ const MainVisual: VFC = () => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        mt: "15vh",
-        mb: "10vh",
+        mt: "9rem",
+        mb: "15rem",
       }}
     >
-      <Box sx={{}}>
+      <Box>
         <Typography
           variant="h2"
           sx={{
             color: "primary.main",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
+            mb: "1rem",
           }}
         >
           yuuki1036
@@ -28,26 +29,29 @@ const MainVisual: VFC = () => {
             color: "secondary.main",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
+            mb: "1rem",
           }}
         >
           Frontend
         </Typography>
         <Typography
+          variant="h2"
           sx={{
             color: "secondary.main",
-            fontSize: "4rem",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
+            mb: "1rem",
           }}
         >
           Backend
         </Typography>
         <Typography
+          variant="h2"
           sx={{
             color: "success.main",
-            fontSize: "4rem",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
+            mb: "1rem",
           }}
         >
           Engineer
