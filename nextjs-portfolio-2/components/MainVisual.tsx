@@ -8,14 +8,14 @@ const MainVisual: VFC = () => {
         display: "flex",
         justifyContent: "center",
         mt: "15vh",
-        bgColor: "success.main",
+        mb: "10vh",
       }}
     >
-      <Box sx={{ bgColor: "success.main" }}>
+      <Box sx={{}}>
         <Typography
+          variant="h2"
           sx={{
             color: "primary.main",
-            fontSize: "4rem",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
           }}
@@ -23,9 +23,9 @@ const MainVisual: VFC = () => {
           yuuki1036
         </Typography>
         <Typography
+          variant="h2"
           sx={{
             color: "secondary.main",
-            fontSize: "4rem",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
           }}
@@ -44,7 +44,7 @@ const MainVisual: VFC = () => {
         </Typography>
         <Typography
           sx={{
-            color: "primary.light",
+            color: "success.main",
             fontSize: "4rem",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",

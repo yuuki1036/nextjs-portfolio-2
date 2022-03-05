@@ -1,4 +1,3 @@
-import { red } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 // Create a theme instance.
@@ -6,7 +5,6 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#03a9f4",
-      light: "#fff",
     },
     secondary: {
       main: "#c51162",
@@ -15,13 +13,16 @@ const theme = createTheme({
       main: "#D9CB9E",
     },
     warning: {
-      main: "#b9a04d",
+      main: "#A69B79",
     },
     error: {
       main: "#3B372A",
     },
     success: {
-      main: "#fffde7",
+      main: "#fff",
+    },
+    background: {
+      paper: "#fffde7",
     },
   },
   typography: {

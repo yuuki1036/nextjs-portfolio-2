@@ -3,8 +3,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
-import MainVisual from "components/MainvVsual";
-import Wrapper from "components/wrapper";
+import MainVisual from "components/MainVisual";
+import MyAvatar from "components/MyAvatar";
+import Profile from "components/Profile";
+import Wrapper from "components/Wrapper";
 import type { NextPage } from "next";
 import Image from "next/image";
 import * as React from "react";
@@ -19,6 +21,7 @@ const Home: NextPage = () => {
   return (
     <Wrapper>
       <MainVisual />
+      <Profile />
     </Wrapper>
   );
 };

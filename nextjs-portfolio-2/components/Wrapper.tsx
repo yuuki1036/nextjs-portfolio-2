@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import React, { ReactNode, VFC } from "react";
 
 type Props = {
@@ -6,14 +6,7 @@ type Props = {
 };
 
 const Wrapper: VFC<Props> = ({ children }) => {
-  return (
-    <Container
-      maxWidth="lg"
-      sx={{ bgColor: "success.main" }}
-    >
-      <main>{children}</main>
-    </Container>
-  );
+  return <Box sx={{ pb: "100rem" }}>{children}</Box>;
 };
 
 export default Wrapper;
