@@ -13,16 +13,16 @@ let theme = createTheme({
       main: "#c51162",
     },
     info: {
-      main: "#D9CB9E",
+      main: "#F3EEE1",
     },
     warning: {
-      main: "#8C8366",
+      main: "#D9D0B4",
     },
     error: {
       main: "#3B372A",
     },
     success: {
-      main: "#fff",
+      main: "#262520",
     },
     background: {
       paper: "#fffde7",

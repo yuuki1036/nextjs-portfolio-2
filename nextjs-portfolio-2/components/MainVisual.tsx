@@ -48,7 +48,7 @@ const MainVisual: VFC = () => {
         <Typography
           variant="h2"
           sx={{
-            color: "success.main",
+            color: "#fff",
             fontWeight: "bold",
             WebkitTextStroke: "1px #000",
             mb: "1rem",

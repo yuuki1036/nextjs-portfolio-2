@@ -4,13 +4,32 @@ import Profile from "components/Profile";
 import Wrapper from "components/Wrapper";
 import type { NextPage } from "next";
 import SkillButton from "components/SkillButton";
+import ProfileArea from "components/ProfileArea";
+import WorksArea from "components/WorksArea";
+import { getAllPosts } from "lib/api";
+import Post from "types/post";
 
-const Home: NextPage = () => {
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts();
+
+  return {
+    props: { allPosts },
+  };
+};
+
+type Props = {
+  allPosts: Post[];
+};
+
+const Home: NextPage<Props> = ({ allPosts }) => {
   return (
     <Wrapper>
       <MainVisual />
-      <Profile />
+      <ProfileArea />
       <SkillButton />
+      {allPosts.length > 0 && (
+        <WorksArea posts={allPosts} />
+      )}
     </Wrapper>
   );
 };

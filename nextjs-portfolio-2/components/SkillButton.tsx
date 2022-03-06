@@ -1,18 +1,7 @@
-import {
-  ArrowCircleRight,
-  Description,
-} from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Container,
-  Typography,
-} from "@mui/material";
-import Image from "next/image";
-import React, { ReactNode, VFC } from "react";
+import { ArrowCircleRight } from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
+import React, { VFC } from "react";
 import { Parallax } from "react-scroll-parallax";
-import profile from "../public/images/profile.png";
-import Link from "./Link";
 
 const SkillButton: VFC = () => {
   return (
@@ -27,7 +16,7 @@ const SkillButton: VFC = () => {
         mb: "10rem",
       }}
     >
-      <Parallax speed={1}>
+      <Parallax speed={-1}>
         <Box
           sx={{
             display: "flex",
