@@ -18,13 +18,6 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
   return (
     <Box>
       <ParallaxBanner
-        style={{
-          borderRadius: "2rem",
-          width: "220px",
-          height: "150px",
-          maxWidth: "440px",
-          maxHeight: "300px",
-        }}
         layers={[
           {
             children: (
@@ -40,7 +33,15 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
           },
         ]}
       >
-        {/* <Box sx={{ width: "440px", height: "300px" }}></Box> */}
+        <Box
+          sx={{
+            width: "70vw",
+            height: "60vw",
+            maxWidth: "440px",
+            maxHeight: "300px",
+            mb: "2rem",
+          }}
+        ></Box>
       </ParallaxBanner>
     </Box>
   );

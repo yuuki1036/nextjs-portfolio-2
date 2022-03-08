@@ -14,34 +14,33 @@ type Props = {
 const WorksPreview: VFC<Props> = ({ post }) => {
   return (
     <article>
-      <Grid
-        container
+      <Box
         sx={{
-          bgcolor: "info.main",
+          bgcolor: { xs: "warning.main", sm: "info.main" },
           display: "flex",
           flexWrap: "wrap",
+          justifyContent: "center",
           width: "100%",
           py: "4rem",
           px: "1rem",
-          // mx: "2rem",
           mb: "10rem",
-          borderRadius: "2rem",
+          borderRadius: "1rem",
         }}
       >
-        <Grid item sm={12}>
+        <Box>
           <Parallax speed={-2}>
             <WorksPreviewImage
               src={post.coverImage}
               title={post.title}
             />
           </Parallax>
-        </Grid>
-        <Grid item>
+        </Box>
+        <Box>
           <Parallax speed={-2}>
             <WorksPreviewData post={post} />
           </Parallax>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </article>
   );
 };

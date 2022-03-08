@@ -18,7 +18,7 @@ const WorksPreviewData: VFC<Props> = ({ post }) => {
         sx={{
           color: "secondary.main",
           fontWeight: "bold",
-          WebkitTextStroke: "1px #000",
+          // WebkitTextStroke: "1px #000",
         }}
       >
         {post.title}
