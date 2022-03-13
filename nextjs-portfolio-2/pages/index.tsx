@@ -10,7 +10,7 @@ import { getAllPosts } from "lib/api";
 import Post from "types/post";
 import CertificationArea from "components/CertificationArea";
 import GithubCorner from "react-github-corner";
-import Footer from "components/footer";
+import Footer from "components/Footer";
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts();

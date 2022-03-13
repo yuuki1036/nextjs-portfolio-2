@@ -6,7 +6,6 @@ import { EmailOutlined, GitHub } from "@mui/icons-material";
 const Footer: VFC = () => {
   return (
     <footer>
-      <Divider />
       <Box
         sx={{
           display: "flex",
@@ -21,6 +20,7 @@ const Footer: VFC = () => {
             href="https://github.com/yuuki1036"
             target="_blank"
             rel="noopener noreferrer"
+            sx={{ textDecoration: "none" }}
           >
             <Box
               sx={{
@@ -28,9 +28,21 @@ const Footer: VFC = () => {
                 alignItems: "center",
               }}
             >
-              <GitHub fontSize="large" />
+              <GitHub
+                fontSize="large"
+                sx={{ color: "error.main" }}
+              />
 
-              <Typography>yuuki1036</Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  ml: "1rem",
+                  color: "error.main",
+                  fontWeight: "bold",
+                }}
+              >
+                yuuki1036
+              </Typography>
             </Box>
           </Link>
 
@@ -38,15 +50,29 @@ const Footer: VFC = () => {
             href="mailto:yuuki1036@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            sx={{ textDecoration: "none" }}
           >
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
+                mt: "1rem",
               }}
             >
-              <EmailOutlined fontSize="medium" />
-              <Typography>yuuki1036@gmail.com</Typography>
+              <EmailOutlined
+                fontSize="large"
+                sx={{ color: "error.main" }}
+              />
+              <Typography
+                variant="h6"
+                sx={{
+                  ml: "1rem",
+                  color: "error.main",
+                  fontWeight: "bold",
+                }}
+              >
+                yuuki1036@gmail.com
+              </Typography>
             </Box>
           </Link>
         </Box>
