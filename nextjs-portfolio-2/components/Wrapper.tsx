@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Wrapper: VFC<Props> = ({ children }) => {
-  return <Box sx={{ pb: "100rem" }}>{children}</Box>;
+  return <Box sx={{}}>{children}</Box>;
 };
 
 export default Wrapper;

@@ -8,6 +8,9 @@ import ProfileArea from "components/ProfileArea";
 import WorksArea from "components/WorksArea";
 import { getAllPosts } from "lib/api";
 import Post from "types/post";
+import CertificationArea from "components/CertificationArea";
+import GithubCorner from "react-github-corner";
+import Footer from "components/footer";
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts();
@@ -23,14 +26,20 @@ type Props = {
 
 const Home: NextPage<Props> = ({ allPosts }) => {
   return (
-    <Wrapper>
-      <MainVisual />
-      <ProfileArea />
-      <SkillButton />
-      {allPosts.length > 0 && (
+    <>
+      <Wrapper>
+        <MainVisual />
+        <ProfileArea />
+        <SkillButton />
         <WorksArea posts={allPosts} />
-      )}
-    </Wrapper>
+        <CertificationArea />
+        <Footer />
+      </Wrapper>
+      <GithubCorner
+        href="https://github.com/yuuki1036"
+        bannerColor="#3B372A"
+      />
+    </>
   );
 };
 
