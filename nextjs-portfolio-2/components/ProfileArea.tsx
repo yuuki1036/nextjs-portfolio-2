@@ -18,7 +18,7 @@ const ProfileArea: VFC = () => {
         mb: "10rem",
       }}
     >
-      <Parallax speed={-2}>
+      <Parallax speed={-1}>
         <Box
           sx={{
             display: "flex",

@@ -28,18 +28,21 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
                 alt={title}
               />
             ),
-            speed: -4,
+            speed: -2,
             expanded: true,
           },
         ]}
       >
         <Box
           sx={{
-            width: "70vw",
-            height: "60vw",
-            maxWidth: "440px",
-            maxHeight: "300px",
-            mb: "2rem",
+            width: {
+              xs: "300px",
+              md: "440px",
+            },
+            height: {
+              xs: "240px",
+              md: "352px",
+            },
           }}
         ></Box>
       </ParallaxBanner>

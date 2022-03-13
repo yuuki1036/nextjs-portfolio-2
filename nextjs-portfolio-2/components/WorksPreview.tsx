@@ -16,19 +16,20 @@ const WorksPreview: VFC<Props> = ({ post }) => {
     <article>
       <Box
         sx={{
-          bgcolor: { xs: "warning.main", sm: "info.main" },
+          bgcolor: "info.main",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          alignItems: "center",
           width: "100%",
-          py: "4rem",
+          py: { xs: "2rem", sm: "4rem" },
           px: "1rem",
-          mb: "10rem",
+          mb: { xs: "4rem", sm: "8rem" },
           borderRadius: "1rem",
         }}
       >
         <Box>
-          <Parallax speed={-2}>
+          <Parallax speed={-1}>
             <WorksPreviewImage
               src={post.coverImage}
               title={post.title}
@@ -36,7 +37,7 @@ const WorksPreview: VFC<Props> = ({ post }) => {
           </Parallax>
         </Box>
         <Box>
-          <Parallax speed={-2}>
+          <Parallax speed={-1}>
             <WorksPreviewData post={post} />
           </Parallax>
         </Box>

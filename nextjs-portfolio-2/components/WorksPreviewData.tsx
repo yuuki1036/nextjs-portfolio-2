@@ -1,10 +1,8 @@
-import { Box, Chip, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
 import Post from "types/post";
-import MyAvatar from "./MyAvatar";
-import Profile from "./Profile";
-import WorksPreviewImage from "./WorksPreviewImage";
+import DateFormatter from "./date-formatter";
+import MoreInfoButton from "./MoreInfoButton";
 
 type Props = {
   post: Post;
@@ -12,18 +10,28 @@ type Props = {
 
 const WorksPreviewData: VFC<Props> = ({ post }) => {
   return (
-    <Box sx={{ ml: "2rem" }}>
+    <Box
+      sx={{
+        minWidth: "300px",
+        ml: { sm: "2rem" },
+        mt: { xs: "1rem", md: 0 },
+      }}
+    >
       <Typography
         variant="h4"
         sx={{
           color: "secondary.main",
           fontWeight: "bold",
-          // WebkitTextStroke: "1px #000",
         }}
       >
         {post.title}
       </Typography>
-      <Typography sx={{ mb: ".8rem" }}>
+      <Typography
+        sx={{
+          mt: { xs: 0, sm: ".5rem" },
+          mb: { xs: ".6rem", sm: "1rem" },
+        }}
+      >
         {post.excerpt}
       </Typography>
       {post.tag.map((value, i) => (
@@ -31,7 +39,7 @@ const WorksPreviewData: VFC<Props> = ({ post }) => {
           key={i}
           sx={{
             display: "inline",
-            bgcolor: "primary.main",
+            bgcolor: "error.main",
             mr: ".8rem",
             px: ".7rem",
             py: ".2rem",
@@ -42,6 +50,10 @@ const WorksPreviewData: VFC<Props> = ({ post }) => {
           {value}
         </Typography>
       ))}
+      <Typography sx={{ mt: { xs: ".5rem", sm: "1rem" } }}>
+        <DateFormatter dateString={post.date} />
+      </Typography>
+      <MoreInfoButton />
     </Box>
   );
 };

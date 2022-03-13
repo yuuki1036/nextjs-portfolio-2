@@ -3,17 +3,15 @@ import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
 import { Parallax } from "react-scroll-parallax";
 
-const SkillButton: VFC = () => {
+const MoreInfoButton: VFC = () => {
   return (
     <Box
       sx={{
         bgcolor: "warning.main",
         textAlign: "center",
-        width: "20rem",
-        mx: "auto",
         p: "1.5rem",
         borderRadius: "5rem",
-        mb: "10rem",
+        mt: "1rem",
       }}
     >
       <Parallax speed={-1}>
@@ -30,7 +28,7 @@ const SkillButton: VFC = () => {
             fontWeight="bold"
             sx={{ ml: ".5rem", mt: ".2rem" }}
           >
-            スキル・経験について
+            More Info
           </Typography>
         </Box>
       </Parallax>
@@ -38,4 +36,4 @@ const SkillButton: VFC = () => {
   );
 };
 
-export default SkillButton;
+export default MoreInfoButton;

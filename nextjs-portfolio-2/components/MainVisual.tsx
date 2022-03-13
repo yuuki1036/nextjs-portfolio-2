@@ -11,7 +11,7 @@ const MainVisual: VFC = () => {
         mb: "15rem",
       }}
     >
-      <Box>
+      <Box sx={{ pl: "1.2rem" }}>
         <Typography
           variant="h2"
           sx={{

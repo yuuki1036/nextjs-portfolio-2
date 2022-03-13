@@ -20,12 +20,17 @@ const MyAvatar: VFC = () => {
                 alt="yuuki1036"
               />
             ),
-            speed: -4,
+            speed: -2,
             expanded: true,
           },
         ]}
       >
-        <Box sx={{ width: "200px", height: "200px" }}></Box>
+        <Box
+          sx={{
+            width: { xs: "150px", sm: "200px" },
+            height: { xs: "150px", sm: "200px" },
+          }}
+        ></Box>
       </ParallaxBanner>
     </Box>
   );
