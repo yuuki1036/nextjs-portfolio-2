@@ -10,7 +10,6 @@ import { getAllPosts } from "lib/api";
 import Post from "types/post";
 import CertificationArea from "components/CertificationArea";
 import GithubCorner from "react-github-corner";
-import Footer from "components/Footer";
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts();
@@ -33,11 +32,12 @@ const Home: NextPage<Props> = ({ allPosts }) => {
         <SkillButton />
         <WorksArea posts={allPosts} />
         <CertificationArea />
-        <Footer />
       </Wrapper>
       <GithubCorner
         href="https://github.com/yuuki1036"
         bannerColor="#3B372A"
+        target="_blank"
+        rel="noopener noreferrer"
       />
     </>
   );

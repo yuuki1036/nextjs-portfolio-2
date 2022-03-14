@@ -25,6 +25,8 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
                 src={src}
                 width={440}
                 height={440}
+                placeholder="blur"
+                blurDataURL={src}
                 alt={title}
               />
             ),
