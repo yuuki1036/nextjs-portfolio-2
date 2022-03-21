@@ -22,24 +22,19 @@ const WorksPreview: VFC<Props> = ({ post }) => {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          py: { xs: "2rem", sm: "4rem" },
+          py: { xs: "2rem", sm: "3rem" },
           px: "1rem",
           mb: { xs: "4rem", sm: "8rem" },
-          borderRadius: "1rem",
         }}
       >
         <Box>
-          <Parallax speed={-1}>
-            <WorksPreviewImage
-              src={post.coverImage}
-              title={post.title}
-            />
-          </Parallax>
+          <WorksPreviewImage
+            src={post.coverImage}
+            title={post.title}
+          />
         </Box>
         <Box>
-          <Parallax speed={-1}>
-            <WorksPreviewData post={post} />
-          </Parallax>
+          <WorksPreviewData post={post} />
         </Box>
       </Box>
     </article>

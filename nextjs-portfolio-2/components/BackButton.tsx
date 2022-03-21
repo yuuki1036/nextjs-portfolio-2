@@ -1,22 +1,22 @@
 import { ArrowCircleRight } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
 import Link from "./Link";
 
-const SkillButton: VFC = () => {
+const BackButton: VFC = () => {
   return (
-    <Link href="/experience" underline="none">
+    <Link href="/" underline="none">
       <Box
         sx={{
           bgcolor: "warning.main",
           textAlign: "center",
-          width: "20rem",
+          width: "16rem",
           mx: "auto",
           px: "1.5rem",
           py: "1rem",
           borderRadius: "5rem",
-          mb: "10rem",
+          mt: "8rem",
+          mb: "8rem",
         }}
       >
         <Box
@@ -36,7 +36,7 @@ const SkillButton: VFC = () => {
               mt: ".2rem",
             }}
           >
-            スキル・経験について
+            BACK
           </Typography>
         </Box>
       </Box>
@@ -44,4 +44,4 @@ const SkillButton: VFC = () => {
   );
 };
 
-export default SkillButton;
+export default BackButton;

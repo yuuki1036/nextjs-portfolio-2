@@ -13,24 +13,22 @@ const ProfileArea: VFC = () => {
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
-        py: "2rem",
+        py: "1.8rem",
         px: "1rem",
         mb: "10rem",
       }}
     >
-      <Parallax speed={-1}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <MyAvatar />
-          <Profile />
-        </Box>
-      </Parallax>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <MyAvatar />
+        <Profile />
+      </Box>
     </Box>
   );
 };

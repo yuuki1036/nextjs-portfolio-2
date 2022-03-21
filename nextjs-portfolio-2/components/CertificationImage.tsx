@@ -19,26 +19,23 @@ const CertificationImage: VFC = () => {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        py: { xs: "2rem", sm: "4rem" },
+        py: { xs: "2rem", sm: "3.5rem" },
         px: "1rem",
         mb: { xs: "4rem", sm: "8rem" },
-        borderRadius: "1rem",
       }}
     >
       <Box>
-        <Parallax speed={-1}>
-          {CertificationData.map((item, idx) => {
-            return (
-              <Image
-                key={idx}
-                src={item.src}
-                alt={item.name}
-                width={150}
-                height={150}
-              />
-            );
-          })}
-        </Parallax>
+        {CertificationData.map((item, idx) => {
+          return (
+            <Image
+              key={idx}
+              src={item.src}
+              alt={item.name}
+              width={150}
+              height={150}
+            />
+          );
+        })}
       </Box>
     </Box>
   );

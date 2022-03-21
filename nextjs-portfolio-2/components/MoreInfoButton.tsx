@@ -9,29 +9,28 @@ const MoreInfoButton: VFC = () => {
       sx={{
         bgcolor: "warning.main",
         textAlign: "center",
-        p: "1.5rem",
+        px: "1rem",
+        py: "1rem",
         borderRadius: "5rem",
         mt: "1rem",
       }}
     >
-      <Parallax speed={-1}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <ArrowCircleRight fontSize="large" />
+        <Typography
+          variant="h6"
+          fontWeight="bold"
+          sx={{ ml: ".5rem", mt: ".2rem" }}
         >
-          <ArrowCircleRight fontSize="large" sx={{}} />
-          <Typography
-            variant="h6"
-            fontWeight="bold"
-            sx={{ ml: ".5rem", mt: ".2rem" }}
-          >
-            More Info
-          </Typography>
-        </Box>
-      </Parallax>
+          More Info
+        </Typography>
+      </Box>
     </Box>
   );
 };

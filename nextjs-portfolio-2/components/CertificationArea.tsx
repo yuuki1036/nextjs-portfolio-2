@@ -19,7 +19,7 @@ const CertificationArea: VFC = () => {
           sx={{
             color: "primary.main",
             fontWeight: "bold",
-            WebkitTextStroke: "1px #000",
+            WebkitTextStroke: "1px #3B372A",
             textAlign: "center",
             mb: "1rem",
           }}

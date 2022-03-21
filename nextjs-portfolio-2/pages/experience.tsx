@@ -9,8 +9,11 @@ import {
   others,
 } from "lib/skill_data";
 import Wrapper from "components/Wrapper";
-import MyHeader from "components/myheader";
+import MyHeader from "components/MyHeader";
 import { Box, Typography } from "@mui/material";
+import SkillSet from "components/SkillSet";
+import OtherSkillSet from "components/OtherSkillSet";
+import BackButton from "components/BackButton";
 
 const Experience: NextPage = () => {
   return (
@@ -23,33 +26,20 @@ const Experience: NextPage = () => {
         />
       </Head>
       <Wrapper>
-        <Box sx={{ mb: "1rem" }}>
-          <MyHeader pageTitle={"experience"} />
-          <Box sx={{ backgroundColor: "Info.main" }}>
-            <Box sx={{ p: "2rem", mt: "4rem" }}>
-              <Typography variant="h5">Basic</Typography>
-            </Box>
-          </Box>
-          <Box sx={{ backgroundColor: "Info.main" }}>
-            <Box sx={{ p: "2rem", mt: "4rem" }}>
-              <Typography variant="h5">
-                Framework
-              </Typography>
-            </Box>
-          </Box>
-          <Box sx={{ backgroundColor: "Info.main" }}>
-            <Box sx={{ p: "2rem", mt: "4rem" }}>
-              <Typography variant="h5">Others</Typography>
-            </Box>
-          </Box>
-          <Box sx={{ backgroundColor: "Info.main" }}>
-            <Box sx={{ p: "2rem", mt: "4rem" }}>
-              <Typography variant="h5" component="h3">
-                certification
-              </Typography>
-            </Box>
-          </Box>
+        <MyHeader pageTitle="experience" />
+        <Box sx={{ maxWidth: "960px", mx: "auto" }}>
+          <SkillSet title="Basic" skills={baseSkills} />
+          <SkillSet
+            title="Framework"
+            skills={FrameworkSkills}
+          />
+          <OtherSkillSet title="Others" skills={others} />
+          <OtherSkillSet
+            title="Certification"
+            skills={certification}
+          />
         </Box>
+        <BackButton />
       </Wrapper>
     </>
   );

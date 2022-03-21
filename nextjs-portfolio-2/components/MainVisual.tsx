@@ -17,7 +17,7 @@ const MainVisual: VFC = () => {
           sx={{
             color: "primary.main",
             fontWeight: "bold",
-            WebkitTextStroke: "1px #000",
+            WebkitTextStroke: "1px #3B372A",
             mb: "1rem",
           }}
         >
@@ -28,7 +28,7 @@ const MainVisual: VFC = () => {
           sx={{
             color: "secondary.main",
             fontWeight: "bold",
-            WebkitTextStroke: "1px #000",
+            WebkitTextStroke: "1px #3B372A",
             mb: "1rem",
           }}
         >
@@ -39,7 +39,7 @@ const MainVisual: VFC = () => {
           sx={{
             color: "secondary.main",
             fontWeight: "bold",
-            WebkitTextStroke: "1px #000",
+            WebkitTextStroke: "1px #3B372A",
             mb: "1rem",
           }}
         >
@@ -50,7 +50,7 @@ const MainVisual: VFC = () => {
           sx={{
             color: "#fff",
             fontWeight: "bold",
-            WebkitTextStroke: "1px #000",
+            WebkitTextStroke: "1px #3B372A",
             mb: "1rem",
           }}
         >

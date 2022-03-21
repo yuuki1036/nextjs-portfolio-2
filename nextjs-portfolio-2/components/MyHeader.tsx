@@ -16,23 +16,12 @@ const MyHeader: VFC<Props> = ({ pageTitle }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          mt: "1rem",
+          mt: "1.5rem",
           mb: "1rem",
         }}
       >
-        <Link href="/">
-          <Box sx={{ width: "48px", height: "48px" }}>
-            <Image
-              src={profile}
-              width={48}
-              height={48}
-              quality={100}
-              alt="yuuki1036"
-            />
-          </Box>
-        </Link>
         <Typography
-          variant="h3"
+          variant="h2"
           sx={{
             ml: "1rem",
             color: "primary.main",
