@@ -9,8 +9,9 @@ const MoreInfoButton: VFC = () => {
       sx={{
         bgcolor: "warning.main",
         textAlign: "center",
-        px: "1rem",
-        py: "1rem",
+        width: "13rem",
+        pt: ".6rem",
+        pb: ".7rem",
         borderRadius: "5rem",
         mt: "1rem",
       }}
@@ -26,7 +27,7 @@ const MoreInfoButton: VFC = () => {
         <Typography
           variant="h6"
           fontWeight="bold"
-          sx={{ ml: ".5rem", mt: ".2rem" }}
+          sx={{ ml: ".5rem", mt: ".2rem", mr: ".4rem" }}
         >
           More Info
         </Typography>

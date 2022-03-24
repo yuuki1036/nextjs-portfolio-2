@@ -14,7 +14,7 @@ const SkillButton: VFC = () => {
           width: "20rem",
           mx: "auto",
           px: "1.5rem",
-          py: "1rem",
+          py: ".8rem",
           borderRadius: "5rem",
           mb: "10rem",
         }}
