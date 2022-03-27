@@ -13,7 +13,7 @@ const BackButton: VFC = () => {
           width: "16rem",
           mx: "auto",
           px: "1.5rem",
-          py: "1rem",
+          py: ".8rem",
           borderRadius: "5rem",
           mt: "8rem",
           mb: "8rem",

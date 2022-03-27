@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
 import Post from "types/post";
-import DateFormatter from "./date-formatter";
+import DateFormatter from "./DateFormatter";
 import MoreInfoButton from "./MoreInfoButton";
 
 type Props = {
@@ -53,7 +53,7 @@ const WorksPreviewData: VFC<Props> = ({ post }) => {
       <Typography sx={{ mt: { xs: ".5rem", sm: "1rem" } }}>
         <DateFormatter dateString={post.date} />
       </Typography>
-      <MoreInfoButton />
+      <MoreInfoButton slug={post.slug} />
     </Box>
   );
 };

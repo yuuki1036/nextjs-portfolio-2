@@ -16,7 +16,7 @@ type Props = {
 
 const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
   return (
-    <Box>
+    <>
       <ParallaxBanner
         layers={[
           {
@@ -28,7 +28,7 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
                 alt={title}
               />
             ),
-            speed: -2,
+            speed: -1,
             expanded: true,
           },
         ]}
@@ -46,7 +46,7 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
           }}
         ></Box>
       </ParallaxBanner>
-    </Box>
+    </>
   );
 };
 
