@@ -1,20 +1,14 @@
-import { Box, Typography } from "@mui/material";
-import Image from "next/image";
 import React, { VFC } from "react";
-import {
-  Parallax,
-  ParallaxBanner,
-} from "react-scroll-parallax";
-import Post from "types/post";
-import MyAvatar from "./MyAvatar";
-import Profile from "./Profile";
+import Image from "next/image";
+import { Box } from "@mui/material";
+import { ParallaxBanner } from "react-scroll-parallax";
 
 type Props = {
   src: string;
-  title: string;
+  alt: string;
 };
 
-const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
+const WorksPreviewImage: VFC<Props> = ({ src, alt }) => {
   return (
     <>
       <ParallaxBanner
@@ -25,7 +19,7 @@ const WorksPreviewImage: VFC<Props> = ({ src, title }) => {
                 src={src}
                 width={440}
                 height={440}
-                alt={title}
+                alt={alt}
               />
             ),
             speed: -1,

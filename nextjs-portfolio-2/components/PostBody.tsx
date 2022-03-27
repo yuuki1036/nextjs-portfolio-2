@@ -1,5 +1,6 @@
 import React, { VFC } from "react";
 import Post from "types/post";
+import PostAddImage from "./PostAddImage";
 import PostItemNormal from "./PostItemNormal";
 import PostItemSpecs from "./PostItemSpecs";
 
@@ -8,6 +9,8 @@ type Props = {
 };
 
 const PostBody: VFC<Props> = ({ post }) => {
+  const src = `/images/works/${post.slug}-add.png`;
+  const alt = `sub image of ${post.title}`;
   return (
     <>
       <PostItemNormal
@@ -21,6 +24,7 @@ const PostBody: VFC<Props> = ({ post }) => {
         />
       )}
       <PostItemSpecs title="仕様" specs={post.spec} />
+      <PostAddImage src={src} alt={alt} />
       <PostItemNormal
         title="主な機能"
         sentences={post.main}

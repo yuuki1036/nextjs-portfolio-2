@@ -27,7 +27,7 @@ const Experience: NextPage = () => {
       </Head>
       <Wrapper>
         <MyHeader pageTitle="experience" />
-        <Box sx={{ maxWidth: "960px", mx: "auto" }}>
+        <Box sx={{ maxWidth: "768px", mx: "auto" }}>
           <SkillSet title="Basic" skills={baseSkills} />
           <SkillSet
             title="Framework"

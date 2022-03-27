@@ -4,7 +4,7 @@ type Post = {
   slug: string;
   title: string;
   excerpt: string;
-  coverImage: string;
+  otherImage: boolean;
   date: string;
   launch?: string;
   source?: string;

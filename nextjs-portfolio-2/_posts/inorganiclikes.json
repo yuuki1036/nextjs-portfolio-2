@@ -1,7 +1,7 @@
 {
   "title": "InorganicLikes",
   "excerpt": "SNS自動化アプリ",
-  "coverImage": "/images/works/inorganiclikes.png",
+  "otherImage": false,
   "date": "2019-03-24",
   "launch": "",
   "source": "https://github.com/yuuki1036/inorganiclikes",

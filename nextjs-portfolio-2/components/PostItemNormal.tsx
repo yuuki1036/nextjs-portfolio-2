@@ -11,8 +11,12 @@ const PostItemNormal: VFC<Props> = ({
   sentences,
 }) => {
   return (
-    <Box my={3}>
-      <Box mb={1}>
+    <Box
+      sx={{
+        mb: "2rem",
+      }}
+    >
+      <Box sx={{ mb: ".6rem" }}>
         <Typography variant="h6" component="h3">
           {title}
         </Typography>

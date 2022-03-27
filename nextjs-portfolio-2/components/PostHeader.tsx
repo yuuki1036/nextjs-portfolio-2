@@ -2,7 +2,11 @@ import React, { VFC } from "react";
 import Image from "next/image";
 import { Box, Fab, Grid, Typography } from "@mui/material";
 import DateFormatter from "./DateFormatter";
-import { GitHub, Launch } from "@mui/icons-material";
+import {
+  GitHub,
+  Launch,
+  PostAddTwoTone,
+} from "@mui/icons-material";
 import Post from "types/post";
 import PostHeaderImage from "./PostHeaderImage";
 
@@ -11,26 +15,42 @@ type Props = {
 };
 
 const PostHeader: VFC<Props> = ({ post }) => {
+  const src = `/images/works/${post.slug}-main.png`;
+  const alt = `main image of ${post.title}`;
+
   return (
     <>
-      <PostHeaderImage post={post} />
-      <Box sx={{ mt: "3rem", mb: "1rem" }}>
-        <Typography variant="h4">{post.title}</Typography>
-      </Box>
-
-      <Grid
-        container
-        spacing={3}
-        justifyContent="flex-end"
-        alignItems="center"
+      <PostHeaderImage src={src} alt={alt} />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mt: "3rem",
+          mb: "1rem",
+        }}
       >
-        <Grid item>
-          <Typography variant="h6">
-            <DateFormatter dateString={post.date} />
-          </Typography>
-        </Grid>
+        <Typography
+          variant="h3"
+          sx={{
+            color: "secondary.main",
+            fontWeight: "bold",
+          }}
+        >
+          {post.title}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h6">
+          <DateFormatter dateString={post.date} />
+        </Typography>
         {post.launch && (
-          <Grid item>
+          <Box sx={{ ml: "1.4rem" }}>
             <a
               href={post.launch}
               target="_blank"
@@ -40,10 +60,10 @@ const PostHeader: VFC<Props> = ({ post }) => {
                 <Launch />
               </Fab>
             </a>
-          </Grid>
+          </Box>
         )}
         {post.source && (
-          <Grid item>
+          <Box sx={{ ml: "1.4rem" }}>
             <a
               href={post.source}
               target="_blank"
@@ -53,9 +73,9 @@ const PostHeader: VFC<Props> = ({ post }) => {
                 <GitHub />
               </Fab>
             </a>
-          </Grid>
+          </Box>
         )}
-      </Grid>
+      </Box>
     </>
   );
 };

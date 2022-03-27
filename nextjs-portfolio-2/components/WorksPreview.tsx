@@ -1,17 +1,16 @@
-import { Box, Grid, Typography } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
-import Post from "types/post";
-import MyAvatar from "./MyAvatar";
-import Profile from "./Profile";
+import { Box } from "@mui/material";
 import WorksPreviewData from "./WorksPreviewData";
 import WorksPreviewImage from "./WorksPreviewImage";
+import Post from "types/post";
 
 type Props = {
   post: Post;
 };
 
 const WorksPreview: VFC<Props> = ({ post }) => {
+  const src = `/images/works/${post.slug}-preview.png`;
+
   return (
     <article>
       <Box
@@ -28,10 +27,7 @@ const WorksPreview: VFC<Props> = ({ post }) => {
         }}
       >
         <Box>
-          <WorksPreviewImage
-            src={post.coverImage}
-            title={post.title}
-          />
+          <WorksPreviewImage src={src} alt={post.title} />
         </Box>
         <Box>
           <WorksPreviewData post={post} />

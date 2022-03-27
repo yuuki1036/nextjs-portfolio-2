@@ -1,7 +1,7 @@
 {
   "title": "VEGETALISM",
   "excerpt": "野菜ショップサイト",
-  "coverImage": "/images/works/vegetalism.png",
+  "otherImage": true,
   "date": "2019-02-02",
   "launch": "http://vegetalism.ml/",
   "source": "https://github.com/yuuki1036/vegetalism",

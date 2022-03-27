@@ -11,6 +11,7 @@ import Wrapper from "components/Wrapper";
 import MyHeader from "components/MyHeader";
 import { Box } from "@mui/material";
 import PostHeader from "components/PostHeader";
+import BackButton from "components/BackButton";
 
 type Props = {
   post: Post;
@@ -36,12 +37,15 @@ const Works: NextPage<Props> = ({ post }) => {
       </Head>
       <Wrapper>
         <MyHeader pageTitle="Works" />
-        <Box sx={{ maxWidth: "960px", mx: "auto" }}>
+        <Box
+          sx={{ maxWidth: "960px", px: "1rem", mx: "auto" }}
+        >
           <PostHeader post={post} />
           <Box sx={{ mt: "3rem", mb: "6rem" }}>
             <PostBody post={post} />
           </Box>
         </Box>
+        <BackButton />
       </Wrapper>
     </>
   );
