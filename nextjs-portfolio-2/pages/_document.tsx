@@ -1,4 +1,5 @@
 import createEmotionServer from "@emotion/server/create-instance";
+import { GA_ID } from "lib/gtag";
 import Document, {
   Html,
   Head,
@@ -12,9 +13,65 @@ import theme from "../styles/theme";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="ja">
         <Head>
-          {/* PWA primary color */}
+          {/* Google Analytics */}
+          {GA_ID && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}', {
+              page_path: window.location.pathname,
+            });
+        `,
+                }}
+              />
+            </>
+          )}
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Kosugi&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
+
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon/favicon-16x16.png"
+          />
+          <link
+            rel="manifest"
+            href="/favicon/site.webmanifest"
+          />
+          <link
+            rel="mask-icon"
+            href="/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+          />
+          <meta
+            name="msapplication-TileColor"
+            content="#da532c"
+          />
           <meta
             name="theme-color"
             content={theme.palette.primary.main}
@@ -23,10 +80,7 @@ export default class MyDocument extends Document {
             rel="shortcut icon"
             href="/static/favicon.ico"
           />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Kosugi&family=Roboto:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
+
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {(this.props as any).emotionStyleTags}
         </Head>

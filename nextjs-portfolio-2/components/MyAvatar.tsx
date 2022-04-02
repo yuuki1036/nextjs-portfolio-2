@@ -16,8 +16,8 @@ const MyAvatar: VFC = () => {
                 src={profile}
                 width={200}
                 height={261}
-                quality={100}
                 alt="yuuki1036"
+                priority={true}
               />
             ),
             speed: -2,
