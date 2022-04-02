@@ -1,8 +1,5 @@
 import React, { VFC } from "react";
-import { Box, Divider, Typography } from "@mui/material";
-import Link from "./Link";
-import Image from "next/image";
-import profile from "../public/images/profile.webp";
+import { Box, Typography } from "@mui/material";
 
 type Props = {
   pageTitle: string;

@@ -6,41 +6,48 @@ import Link from "./Link";
 
 const SkillButton: VFC = () => {
   return (
-    <Link href="/experience" underline="none">
-      <Box
-        sx={{
-          bgcolor: "warning.main",
-          textAlign: "center",
-          width: "20rem",
-          mx: "auto",
-          px: "1.5rem",
-          py: ".8rem",
-          borderRadius: "5rem",
-          mb: "10rem",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "error.main",
-          }}
-        >
-          <ArrowCircleRight fontSize="large" />
-          <Typography
-            variant="h6"
-            fontWeight="bold"
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        mb: "10rem",
+      }}
+    >
+      <Link href="/experience" underline="none" passHref>
+        <a>
+          <Box
             sx={{
-              ml: ".5rem",
-              mt: ".2rem",
+              bgcolor: "warning.main",
+              width: "20rem",
+              px: "1.5rem",
+              py: ".8rem",
+              borderRadius: "5rem",
             }}
           >
-            スキル・経験について
-          </Typography>
-        </Box>
-      </Box>
-    </Link>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "error.main",
+              }}
+            >
+              <ArrowCircleRight fontSize="large" />
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                sx={{
+                  ml: ".5rem",
+                  mt: ".2rem",
+                }}
+              >
+                スキル・経験について
+              </Typography>
+            </Box>
+          </Box>
+        </a>
+      </Link>
+    </Box>
   );
 };
 

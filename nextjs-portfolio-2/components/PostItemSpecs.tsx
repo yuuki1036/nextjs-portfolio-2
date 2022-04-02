@@ -27,13 +27,13 @@ const PostItemSpecs: VFC<Props> = ({ title, specs }) => {
   ];
 
   return (
-    <Box my={3}>
+    <Box sx={{ my: "3rem" }}>
       <Box>
         <Typography variant="h6" component="h3">
           {title}
         </Typography>
       </Box>
-      <Box mt={1}>
+      <Box sx={{ mt: "1rem" }}>
         <TableContainer>
           <Table size="small">
             <TableBody>

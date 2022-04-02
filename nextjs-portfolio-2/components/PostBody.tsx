@@ -24,7 +24,9 @@ const PostBody: VFC<Props> = ({ post }) => {
         />
       )}
       <PostItemSpecs title="仕様" specs={post.spec} />
-      <PostAddImage src={src} alt={alt} />
+      {post.otherImage && (
+        <PostAddImage src={src} alt={alt} />
+      )}
       <PostItemNormal
         title="主な機能"
         sentences={post.main}

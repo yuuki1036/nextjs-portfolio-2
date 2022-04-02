@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
 import MyAvatar from "./MyAvatar";
 import Profile from "./Profile";
 

@@ -4,32 +4,23 @@ import React, { VFC } from "react";
 import { Parallax } from "react-scroll-parallax";
 import Link from "./Link";
 
-type Props = {
-  slug: string;
-};
-
-const MoreInfoButton: VFC<Props> = ({ slug }) => {
+const ThisSiteButton: VFC = () => {
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "center",
-        mt: "1rem",
+        mb: "10rem",
       }}
     >
-      <Link
-        as={`/works/${slug}`}
-        href="/works/[slug]"
-        underline="none"
-        passHref
-      >
+      <Link href="/thispage" underline="none" passHref>
         <a>
           <Box
             sx={{
               bgcolor: "warning.main",
-              width: "13rem",
-              px: ".6rem",
-              py: ".7rem",
+              width: "20rem",
+              px: "1.5rem",
+              py: ".8rem",
               borderRadius: "5rem",
             }}
           >
@@ -48,10 +39,9 @@ const MoreInfoButton: VFC<Props> = ({ slug }) => {
                 sx={{
                   ml: ".5rem",
                   mt: ".2rem",
-                  mr: ".4rem",
                 }}
               >
-                More Info
+                このサイトについて
               </Typography>
             </Box>
           </Box>
@@ -61,4 +51,4 @@ const MoreInfoButton: VFC<Props> = ({ slug }) => {
   );
 };
 
-export default MoreInfoButton;
+export default ThisSiteButton;
