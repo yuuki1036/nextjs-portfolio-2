@@ -1,8 +1,7 @@
-import { ArrowCircleRight } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
 import Link from "./Link";
+import { Box, Typography } from "@mui/material";
+import { ArrowCircleRight } from "@mui/icons-material";
 
 const SkillButton: VFC = () => {
   return (
@@ -13,39 +12,37 @@ const SkillButton: VFC = () => {
         mb: "10rem",
       }}
     >
-      <Link href="/experience" underline="none" passHref>
-        <a>
+      <Link href="/experience" underline="none">
+        <Box
+          sx={{
+            bgcolor: "warning.main",
+            width: "20rem",
+            px: "1.5rem",
+            py: ".8rem",
+            borderRadius: "5rem",
+          }}
+        >
           <Box
             sx={{
-              bgcolor: "warning.main",
-              width: "20rem",
-              px: "1.5rem",
-              py: ".8rem",
-              borderRadius: "5rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "error.main",
             }}
           >
-            <Box
+            <ArrowCircleRight fontSize="large" />
+            <Typography
+              variant="h6"
+              fontWeight="bold"
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "error.main",
+                ml: ".5rem",
+                mt: ".2rem",
               }}
             >
-              <ArrowCircleRight fontSize="large" />
-              <Typography
-                variant="h6"
-                fontWeight="bold"
-                sx={{
-                  ml: ".5rem",
-                  mt: ".2rem",
-                }}
-              >
-                スキル・経験について
-              </Typography>
-            </Box>
+              スキル・経験について
+            </Typography>
           </Box>
-        </a>
+        </Box>
       </Link>
     </Box>
   );

@@ -13,39 +13,37 @@ const ThisSiteButton: VFC = () => {
         mb: "10rem",
       }}
     >
-      <Link href="/thispage" underline="none" passHref>
-        <a>
+      <Link href="/thispage" underline="none">
+        <Box
+          sx={{
+            bgcolor: "warning.main",
+            width: "20rem",
+            px: "1.5rem",
+            py: ".8rem",
+            borderRadius: "5rem",
+          }}
+        >
           <Box
             sx={{
-              bgcolor: "warning.main",
-              width: "20rem",
-              px: "1.5rem",
-              py: ".8rem",
-              borderRadius: "5rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "error.main",
             }}
           >
-            <Box
+            <ArrowCircleRight fontSize="large" />
+            <Typography
+              variant="h6"
+              fontWeight="bold"
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "error.main",
+                ml: ".5rem",
+                mt: ".2rem",
               }}
             >
-              <ArrowCircleRight fontSize="large" />
-              <Typography
-                variant="h6"
-                fontWeight="bold"
-                sx={{
-                  ml: ".5rem",
-                  mt: ".2rem",
-                }}
-              >
-                このサイトについて
-              </Typography>
-            </Box>
+              このサイトについて
+            </Typography>
           </Box>
-        </a>
+        </Box>
       </Link>
     </Box>
   );

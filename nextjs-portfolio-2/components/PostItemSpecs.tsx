@@ -9,22 +9,15 @@ import {
   Typography,
 } from "@mui/material";
 import Spec from "types/spec";
+import { createRows } from "lib/util";
 
 type Props = {
   title: string;
   specs: Spec;
 };
 
-const createData = (name: string, value: string) => {
-  return { name, value };
-};
-
 const PostItemSpecs: VFC<Props> = ({ title, specs }) => {
-  const rows = [
-    ...Object.entries(specs).map(([name, value]) =>
-      createData(name, value),
-    ),
-  ];
+  const rows = createRows(specs);
 
   return (
     <Box sx={{ my: "3rem" }}>

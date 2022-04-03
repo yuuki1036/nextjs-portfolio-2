@@ -1,13 +1,7 @@
-import { Box, Container, Typography } from "@mui/material";
-import { CertificationData } from "lib/certification_data";
-import Image from "next/image";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
-import Post from "types/post";
-import MyAvatar from "./MyAvatar";
-import Profile from "./Profile";
-import WorksPreview from "./WorksPreview";
-import Works from "./WorksPreview";
+import Image from "next/image";
+import { Box } from "@mui/material";
+import { CertificationData } from "lib/certification_data";
 
 const CertificationImage: VFC = () => {
   return (
@@ -24,19 +18,34 @@ const CertificationImage: VFC = () => {
         mb: { xs: "4rem", sm: "8rem" },
       }}
     >
-      <Box>
-        {CertificationData.map((item, idx) => {
-          return (
+      {CertificationData.map((item, idx) => {
+        return (
+          <Box
+            key={idx}
+            sx={{
+              position: "relative",
+              width: {
+                xs: "75px",
+                sm: "100px",
+                md: "150px",
+              },
+              height: {
+                xs: "75px",
+                sm: "100px",
+                md: "150px",
+              },
+            }}
+          >
             <Image
-              key={idx}
               src={item.src}
               alt={item.name}
-              width={150}
-              height={150}
+              layout="fill"
+              objectFit="cover"
+              priority={true}
             />
-          );
-        })}
-      </Box>
+          </Box>
+        );
+      })}
     </Box>
   );
 };

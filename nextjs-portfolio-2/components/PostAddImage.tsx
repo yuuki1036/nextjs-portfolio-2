@@ -1,4 +1,4 @@
-import React, { VFC } from "react";
+import React, { useState, VFC } from "react";
 import Image from "next/image";
 import { Box } from "@mui/material";
 
@@ -8,6 +8,8 @@ type Props = {
 };
 
 const PostAddImage: VFC<Props> = ({ src, alt }) => {
+  const [isLoad, setIsLoad] = useState<boolean>(false);
+
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Box
@@ -30,7 +32,8 @@ const PostAddImage: VFC<Props> = ({ src, alt }) => {
           alt={alt}
           layout="fill"
           objectFit="cover"
-          priority={true}
+          className={isLoad ? "onload-complete" : "onload"}
+          onLoadingComplete={() => setIsLoad(true)}
         />
       </Box>
     </Box>

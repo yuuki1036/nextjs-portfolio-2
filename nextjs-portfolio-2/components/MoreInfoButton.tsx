@@ -21,41 +21,38 @@ const MoreInfoButton: VFC<Props> = ({ slug }) => {
         as={`/works/${slug}`}
         href="/works/[slug]"
         underline="none"
-        passHref
       >
-        <a>
+        <Box
+          sx={{
+            bgcolor: "warning.main",
+            width: "13rem",
+            px: ".6rem",
+            py: ".7rem",
+            borderRadius: "5rem",
+          }}
+        >
           <Box
             sx={{
-              bgcolor: "warning.main",
-              width: "13rem",
-              px: ".6rem",
-              py: ".7rem",
-              borderRadius: "5rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "error.main",
             }}
           >
-            <Box
+            <ArrowCircleRight fontSize="large" />
+            <Typography
+              variant="h6"
+              fontWeight="bold"
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "error.main",
+                ml: ".5rem",
+                mt: ".2rem",
+                mr: ".4rem",
               }}
             >
-              <ArrowCircleRight fontSize="large" />
-              <Typography
-                variant="h6"
-                fontWeight="bold"
-                sx={{
-                  ml: ".5rem",
-                  mt: ".2rem",
-                  mr: ".4rem",
-                }}
-              >
-                More Info
-              </Typography>
-            </Box>
+              More Info
+            </Typography>
           </Box>
-        </a>
+        </Box>
       </Link>
     </Box>
   );
