@@ -9,6 +9,7 @@ import {
 } from "@mui/icons-material";
 import Post from "types/post";
 import PostHeaderImage from "./PostHeaderImage";
+import MyFab from "./MyFab";
 
 type Props = {
   post: Post;
@@ -51,28 +52,16 @@ const PostHeader: VFC<Props> = ({ post }) => {
         </Typography>
         {post.launch && (
           <Box sx={{ ml: "1.4rem" }}>
-            <a
-              href={post.launch}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Fab size="medium">
-                <Launch />
-              </Fab>
-            </a>
+            <MyFab href={post.launch}>
+              <Launch />
+            </MyFab>
           </Box>
         )}
         {post.source && (
           <Box sx={{ ml: "1.4rem" }}>
-            <a
-              href={post.source}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Fab size="medium">
-                <GitHub />
-              </Fab>
-            </a>
+            <MyFab href={post.source}>
+              <GitHub />
+            </MyFab>
           </Box>
         )}
       </Box>
