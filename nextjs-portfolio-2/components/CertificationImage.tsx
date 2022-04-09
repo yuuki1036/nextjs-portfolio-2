@@ -41,7 +41,6 @@ const CertificationImage: VFC = () => {
               alt={item.name}
               layout="fill"
               objectFit="cover"
-              // priority={true}
             />
           </Box>
         );

@@ -20,7 +20,6 @@ const WorksPreviewImage: VFC<Props> = ({ src, alt }) => {
                 width={440}
                 height={440}
                 alt={alt}
-                // priority={true}
               />
             ),
             speed: -1,
