@@ -1,4 +1,4 @@
-import { ArrowRight, Launch } from "@mui/icons-material";
+import React, { VFC } from "react";
 import {
   Box,
   IconButton,
@@ -9,7 +9,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import React, { VFC } from "react";
+import { ArrowRight, Launch } from "@mui/icons-material";
 import { OtherSkill } from "types/other-skills";
 
 type Props = {

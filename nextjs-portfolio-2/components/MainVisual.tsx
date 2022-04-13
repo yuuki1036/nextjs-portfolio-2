@@ -1,5 +1,5 @@
-import { Box, Container, Typography } from "@mui/material";
-import React, { ReactNode, VFC } from "react";
+import React, { VFC } from "react";
+import { Box, Typography } from "@mui/material";
 
 const MainVisual: VFC = () => {
   return (

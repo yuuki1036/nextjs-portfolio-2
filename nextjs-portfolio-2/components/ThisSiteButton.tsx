@@ -1,8 +1,7 @@
-import { ArrowCircleRight } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
 import Link from "./Link";
+import { Box, Typography } from "@mui/material";
+import { ArrowCircleRight } from "@mui/icons-material";
 
 const ThisSiteButton: VFC = () => {
   return (

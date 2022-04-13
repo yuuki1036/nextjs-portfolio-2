@@ -1,6 +1,6 @@
-import { Box } from "@mui/material";
-import Image from "next/image";
 import React, { VFC } from "react";
+import Image from "next/image";
+import { Box } from "@mui/material";
 import { ParallaxBanner } from "react-scroll-parallax";
 import profile from "../public/images/profile.png";
 

@@ -1,12 +1,7 @@
 import React, { VFC } from "react";
-import Image from "next/image";
-import { Box, Fab, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import DateFormatter from "./DateFormatter";
-import {
-  GitHub,
-  Launch,
-  PostAddTwoTone,
-} from "@mui/icons-material";
+import { GitHub, Launch } from "@mui/icons-material";
 import Post from "types/post";
 import PostHeaderImage from "./PostHeaderImage";
 import MyFab from "./MyFab";

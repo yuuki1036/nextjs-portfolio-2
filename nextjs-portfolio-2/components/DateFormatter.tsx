@@ -1,5 +1,5 @@
+import React, { VFC } from "react";
 import { parseISO, format } from "date-fns";
-import { VFC } from "react";
 
 type Props = {
   dateString: string;

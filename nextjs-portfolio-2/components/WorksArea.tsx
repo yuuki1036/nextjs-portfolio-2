@@ -1,11 +1,7 @@
-import { Box, Container, Typography } from "@mui/material";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
+import { Box, Typography } from "@mui/material";
 import Post from "types/post";
-import MyAvatar from "./MyAvatar";
-import Profile from "./Profile";
 import WorksPreview from "./WorksPreview";
-import Works from "./WorksPreview";
 
 type Props = {
   posts: Post[];

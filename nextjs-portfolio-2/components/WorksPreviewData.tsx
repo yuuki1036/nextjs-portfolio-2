@@ -1,5 +1,5 @@
-import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
+import { Box, Typography } from "@mui/material";
 import Post from "types/post";
 import DateFormatter from "./DateFormatter";
 import MoreInfoButton from "./MoreInfoButton";

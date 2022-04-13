@@ -1,14 +1,6 @@
-import { Box, Container, Typography } from "@mui/material";
-import { CertificationData } from "lib/certification_data";
-import Image from "next/image";
 import React, { VFC } from "react";
-import { Parallax } from "react-scroll-parallax";
-import Post from "types/post";
+import { Box, Typography } from "@mui/material";
 import CertificationImage from "./CertificationImage";
-import MyAvatar from "./MyAvatar";
-import Profile from "./Profile";
-import WorksPreview from "./WorksPreview";
-import Works from "./WorksPreview";
 
 const CertificationArea: VFC = () => {
   return (

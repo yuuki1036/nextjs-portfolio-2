@@ -10,7 +10,7 @@ import {
 } from "lib/skill_data";
 import Wrapper from "components/Wrapper";
 import MyHeader from "components/MyHeader";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import SkillSet from "components/SkillSet";
 import OtherSkillSet from "components/OtherSkillSet";
 import BackButton from "components/BackButton";

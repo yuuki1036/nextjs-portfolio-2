@@ -1,4 +1,4 @@
-import React, { VFC } from "react";
+import React, { useState, VFC } from "react";
 import Image from "next/image";
 import { Box } from "@mui/material";
 import { ParallaxBanner } from "react-scroll-parallax";
@@ -9,6 +9,8 @@ type Props = {
 };
 
 const WorksPreviewImage: VFC<Props> = ({ src, alt }) => {
+  const [isLoad, setIsLoad] = useState<boolean>(false);
+
   return (
     <>
       <ParallaxBanner
@@ -20,6 +22,10 @@ const WorksPreviewImage: VFC<Props> = ({ src, alt }) => {
                 width={440}
                 height={440}
                 alt={alt}
+                className={
+                  isLoad ? "onload-complete" : "onload"
+                }
+                onLoadingComplete={() => setIsLoad(true)}
               />
             ),
             speed: -1,

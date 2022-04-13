@@ -1,6 +1,6 @@
 import React, { VFC } from "react";
-import { Box, Divider, Typography } from "@mui/material";
 import Link from "./Link";
+import { Box, Typography } from "@mui/material";
 import { EmailOutlined, GitHub } from "@mui/icons-material";
 
 const Footer: VFC = () => {

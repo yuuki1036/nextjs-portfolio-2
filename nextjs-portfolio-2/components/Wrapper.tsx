@@ -1,5 +1,5 @@
-import { Box, Container } from "@mui/material";
 import React, { ReactNode, VFC } from "react";
+import { Box } from "@mui/material";
 import Footer from "./Footer";
 
 type Props = {

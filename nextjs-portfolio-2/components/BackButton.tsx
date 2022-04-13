@@ -1,7 +1,7 @@
-import { ArrowCircleRight } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
 import React, { VFC } from "react";
 import Link from "./Link";
+import { Box, Typography } from "@mui/material";
+import { ArrowCircleRight } from "@mui/icons-material";
 
 const BackButton: VFC = () => {
   return (
